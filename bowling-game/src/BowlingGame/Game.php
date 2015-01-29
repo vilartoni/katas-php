@@ -5,14 +5,22 @@ namespace BowlingGame;
 class Game
 {
     /** @var array */
-    private $rolls = [];
+    private $rolls;
+
+    /** @var int */
+    private $currentRoll = 0;
+
+    public function __construct()
+    {
+        $this->rolls = array_fill(0, 21, 0);
+    }
 
     /**
      * @param int $pins
      */
     public function roll($pins)
     {
-        $this->rolls[] = $pins;
+        $this->rolls[$this->currentRoll++] = $pins;
     }
 
     /**

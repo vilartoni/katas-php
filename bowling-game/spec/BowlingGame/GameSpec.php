@@ -34,7 +34,7 @@ class GameSpec extends ObjectBehavior
         $this->rollStrike();
         $this->roll(3);
         $this->roll(4);
-        $this->rollMany(17, 0);
+        $this->rollMany(16, 0);
 
         $this->score()->shouldReturn(24);
     }
